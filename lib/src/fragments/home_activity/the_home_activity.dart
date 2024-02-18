@@ -13,8 +13,8 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Todo'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      backgroundColor: Theme.of(context).colorScheme.inversePrimary,
     );
   }
 }
