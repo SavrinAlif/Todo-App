@@ -20,17 +20,15 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
               Flexible(
                 child:
                 Image.asset(
-                  'assets/images/check(512x512).png',
-                  scale: 10,
+                  'assets/images/to_do(512x512).png',
+                  scale: 8,
                   ),
-              ),
-              const SizedBox(
-                width: 15,
               ),
               const Text('Todo App',
               style: TextStyle(
                   color: Colors.black,
-                  fontWeight: FontWeight.bold),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ],
           ),

@@ -28,7 +28,7 @@ ClipRRect theBuildClipRRect() {
           gradient: LinearGradient(
             begin: Alignment.centerLeft,
             end: Alignment.centerRight,
-            colors: <Color>[Colors.greenAccent,Colors.cyanAccent],
+            colors: <Color>[Colors.tealAccent,Colors.greenAccent],
           ),
       ),
     ),
