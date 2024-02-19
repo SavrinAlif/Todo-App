@@ -13,6 +13,7 @@ class TheApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const TheHomeActivity(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
