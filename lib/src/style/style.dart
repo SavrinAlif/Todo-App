@@ -17,3 +17,20 @@ InputDecoration theTextFormFieldDecoration(label) {
     ),
   );
 }
+
+ClipRRect theBuildClipRRect() {
+  return ClipRRect(
+    borderRadius: const BorderRadius.vertical(
+      bottom: Radius.circular(48.0),
+    ),
+    child: Container(
+      decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+            colors: <Color>[Colors.greenAccent,Colors.cyanAccent],
+          ),
+      ),
+    ),
+  );
+}

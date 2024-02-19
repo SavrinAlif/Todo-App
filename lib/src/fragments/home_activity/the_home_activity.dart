@@ -13,9 +13,28 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Do It List'),
           centerTitle: true,
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(
+                child:
+                Image.asset(
+                  'assets/images/check(512x512).png',
+                  scale: 10,
+                  ),
+              ),
+              const SizedBox(
+                width: 15,
+              ),
+              const Text('Todo App',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold),
+              ),
+            ],
+          ),
+          flexibleSpace: theBuildClipRRect(),
         ),
         body: Container(
             padding: const EdgeInsets.all(12),
@@ -31,6 +50,8 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
                 const SizedBox(height: 40,),
                 const Expanded(flex: 90, child: Text('List')),
               ],
-            )));
+            ),
+        ),
+    );
   }
 }
