@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/src/fragments/snack_bar_activity/the_snack_bar.dart';
 import 'package:todo_app/src/style/style.dart';
 
 class TheHomeActivity extends StatefulWidget {
@@ -13,16 +14,21 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
   List toDoList = [];
   String items = "";
 
-  theOnChangeActivity (content) {
+  theOnChangeActivity (String content) {
     setState(() {
-      items = content;
+      items = content.trim();
     });
   }
 
   theTodoActivity () {
-    setState(() {
-      toDoList.add({'item':items});
-    });
+    if (items.isNotEmpty) {
+      setState(() {
+        toDoList.add({'item': items});
+        items = "";
+      });
+    } else {
+      theSnackBar('Please enter a task to add.', context);
+    }
   }
 
   theCardRemove (index) {
@@ -76,9 +82,7 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
                   child:
                   ElevatedButton(
                     style: theBuildStyleFrom(),
-                    onPressed: () {
-                      theTodoActivity();
-                    },
+                    onPressed: theTodoActivity,
                     child: const Icon(Icons.add, size: 35,),
                   ),
                 ),
