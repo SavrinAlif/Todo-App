@@ -11,7 +11,7 @@ class TheHomeActivity extends StatefulWidget {
 
 class _TheHomeActivityState extends State<TheHomeActivity> {
 
-  List toDoList = [];
+  List <String>toDoList = [];
   String items = "";
 
   theOnChangeActivity (String content) {
@@ -23,7 +23,7 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
   theTodoActivity () {
     if (items.isNotEmpty) {
       setState(() {
-        toDoList.add({'item': items});
+        toDoList.add(items);
         items = "";
       });
     } else {
@@ -106,7 +106,7 @@ class _TheHomeActivityState extends State<TheHomeActivity> {
                                 Expanded(
                                     flex: 80,
                                     child: Text(
-                                        toDoList[index]['item'].toString()
+                                        toDoList[index].toString()
                                     )
                                 ),
                                 Expanded(
