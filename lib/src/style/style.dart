@@ -4,16 +4,16 @@ InputDecoration theTextFormFieldDecoration(label) {
   return InputDecoration(
     labelText: label,
     hintText: 'Cucumber',
-    contentPadding: const EdgeInsets.all(10),
+    contentPadding: const EdgeInsets.all(15),
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(50.0),
+      borderRadius: BorderRadius.circular(20.0),
     ),
     enabledBorder: OutlineInputBorder(
       borderSide: const BorderSide(
-        width: 5,
+        width: 3,
         color: Colors.greenAccent,
       ),
-      borderRadius: BorderRadius.circular(50.0),
+      borderRadius: BorderRadius.circular(20.0),
     ),
   );
 }
@@ -21,15 +21,15 @@ InputDecoration theTextFormFieldDecoration(label) {
 ClipRRect theBuildClipRRect() {
   return ClipRRect(
     borderRadius: const BorderRadius.vertical(
-      bottom: Radius.circular(48.0),
+      bottom: Radius.circular(25.0),
     ),
     child: Container(
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-            colors: <Color>[Colors.tealAccent,Colors.greenAccent],
-          ),
+        gradient: LinearGradient(
+          begin: Alignment.centerLeft,
+          end: Alignment.centerRight,
+          colors: <Color>[Colors.tealAccent, Colors.greenAccent],
+        ),
       ),
     ),
   );
@@ -53,7 +53,7 @@ SizedBox theSizedBox(child) {
       padding: const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: Colors.greenAccent,
-        borderRadius: BorderRadius.circular(50),
+        borderRadius: BorderRadius.circular(25),
       ),
       child: child,
     ),
