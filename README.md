@@ -1,4 +1,4 @@
-# Simple Todo App in Flutter
+## Simple Todo App in Flutter
 Get things done effortlessly with our intuitive todo app.
 This is a simple Todo app built using Flutter. It allows users to create, read, update, and delete tasks in a convenient manner.
 
